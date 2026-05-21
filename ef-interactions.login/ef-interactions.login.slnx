@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../ef-interactions.login.tests/ef-interactions.login.tests.csproj" Id="e7c3f23d-bd68-410b-b3b7-1635ef0d6472" />
+  <Project Path="ef-interactions.login.csproj" />
+</Solution>
