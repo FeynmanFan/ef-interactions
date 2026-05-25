@@ -3,19 +3,19 @@
 -- =============================================
 
 -- 1. BiometricEvaluation: Represents a single session/evaluation
-CREATE TABLE BiometricEvaluation (
+CREATE TABLE BiometricEvaluations (
     EvaluationId         INT PRIMARY KEY IDENTITY(1,1),
     UserId               INT NOT NULL,
     EvaluationDate       DATETIME2 NOT NULL DEFAULT GETUTCDATE(),
     Notes                NVARCHAR(500) NULL,
     CreatedAt            DATETIME2 NOT NULL DEFAULT GETUTCDATE(),
     
-    CONSTRAINT FK_BiometricEvaluation_Users 
+    CONSTRAINT FK_BiometricEvaluations_Users 
         FOREIGN KEY (UserId) REFERENCES Users(UserId)
 );
 
 -- 2. BiometricMeasure: Individual measurements within an evaluation
-CREATE TABLE BiometricMeasure (
+CREATE TABLE BiometricMeasures (
     MeasureId            INT PRIMARY KEY IDENTITY(1,1),
     EvaluationId         INT NOT NULL,
     MeasureCode          CHAR(4) NOT NULL,           -- 4-letter code (e.g., BFPT, WGTL, etc.)
@@ -23,8 +23,8 @@ CREATE TABLE BiometricMeasure (
     Unit                 NVARCHAR(20) NULL,           -- Optional: lbs, %, mmHg, etc.
     Notes                NVARCHAR(200) NULL,
     
-    CONSTRAINT FK_BiometricMeasure_Evaluation 
-        FOREIGN KEY (EvaluationId) REFERENCES BiometricEvaluation(EvaluationId)
+    CONSTRAINT FK_BiometricMeasures_Evaluation 
+        FOREIGN KEY (EvaluationId) REFERENCES BiometricEvaluations(EvaluationId)
 );
 
 -- =============================================
@@ -35,14 +35,14 @@ CREATE TABLE BiometricMeasure (
 -- INSERT INTO Users (Username, Email, PasswordHash) VALUES ... (if needed)
 
 -- Sample Biometric Evaluations
-INSERT INTO BiometricEvaluation (UserId, EvaluationDate, Notes)
+INSERT INTO BiometricEvaluations (UserId, EvaluationDate, Notes)
 VALUES 
     (1, '2025-05-01 08:15:00', 'Morning baseline'),
     (1, '2025-05-08 07:45:00', 'Post-cut check-in'),
     (2, '2025-05-05 09:30:00', 'Initial assessment');
 
 -- Sample Biometric Measures
-INSERT INTO BiometricMeasure (EvaluationId, MeasureCode, MeasureValue, Unit, Notes)
+INSERT INTO BiometricMeasures (EvaluationId, MeasureCode, MeasureValue, Unit, Notes)
 VALUES 
     -- Evaluation 1
     (1, 'WGTL',  242.5,  'lbs',   'Morning weight'),
