@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="../ef-interactions.benchmarker/ef-interactions.benchmarker.csproj" Id="78b00616-21ec-4a30-a035-59a04d535f78" />
   <Project Path="../ef-interactions.login.tests/ef-interactions.tests.csproj" Id="e7c3f23d-bd68-410b-b3b7-1635ef0d6472" />
   <Project Path="../ef-interactions.nplusone/ef-interactions.nplusone.csproj" Id="9253e284-6057-4136-9ad0-434c34b38869" />
   <Project Path="../ef-interactions.search/ef-interactions.search.csproj" Id="4098e683-61f3-43e2-be18-52def1df1add" />
