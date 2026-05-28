@@ -7,6 +7,9 @@
         public decimal Total { get; set; }
         public DateTime CreatedAt { get; set; }
 
+        public string Status { get; set; } = "Pending";
+        public string? TransactionId { get; set; }
+
         // Navigation property
         public virtual Customer Customer { get; set; } = null!;
     }

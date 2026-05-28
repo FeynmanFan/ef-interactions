@@ -26,6 +26,7 @@
     <ProjectReference Include="..\ef-interactions.login\ef-interactions.login.csproj" />
     <ProjectReference Include="..\ef-interactions.nplusone\ef-interactions.nplusone.csproj" />
     <ProjectReference Include="..\ef-interactions.search\ef-interactions.search.csproj" />
+    <ProjectReference Include="..\ef-interactions.transactions\ef-interactions.transactions.csproj" />
   </ItemGroup>
 
   <ItemGroup>
