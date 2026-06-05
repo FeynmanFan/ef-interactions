@@ -1,4 +1,6 @@
-﻿namespace ef_interactions.nplusone
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ef_interactions.nplusone
 {
     public class Order
     {

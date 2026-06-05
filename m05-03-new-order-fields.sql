@@ -1,4 +1,4 @@
-ALTER TABLE Orders
+    ALTER TABLE Orders
 ADD 
     Status         NVARCHAR(50)   NOT NULL  DEFAULT 'Pending',
     TransactionId  NVARCHAR(100)  NULL;
