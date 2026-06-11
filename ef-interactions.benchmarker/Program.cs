@@ -6,7 +6,8 @@
     {
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<EfLoadingBenchmarks>();
+            // var summary = BenchmarkRunner.Run<EfLoadingBenchmarks>();
+            var summary = BenchmarkRunner.Run<ChangeTrackingBenchmarks>();
         }
     }
 }

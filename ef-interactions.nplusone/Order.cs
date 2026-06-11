@@ -14,5 +14,7 @@ namespace ef_interactions.nplusone
 
         // Navigation property
         public virtual Customer Customer { get; set; } = null!;
+
+        public virtual ICollection<OrderItem> Items { get; set; } = new List<OrderItem>();
     }
 }
